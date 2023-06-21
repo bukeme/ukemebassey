@@ -16,5 +16,5 @@ function navEvent() {
 };
 
 navItems.forEach(function(navItem, index) {
-	navItem.style.transitionDelay = `${0.12 + (index * 0.1)}s`;
+	navItem.style.transitionDelay = `${0.12 + (index * 0.05)}s`;
 })

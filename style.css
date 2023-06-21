@@ -322,6 +322,66 @@ section#skills {
 section#projects {
 	min-height: 95vh;
 	background-color: var(--secondary);
+	padding: 40px 30px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.projects-header {
+	font-size: 40px;
+	color: var(--primary);
+	text-align: center;
+}
+
+.projects-wrapper {
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	/*align-items: center;*/
+	/*justify-content: center;*/
+}
+
+.project {
+	padding: 20px;
+	border-radius: 5px;
+	background-color: var(--primary);
+	width: 300px;
+	margin: 10px;
+}
+
+.project-img,
+.project-img img {
+	border-radius: 5px;
+}
+
+.project h3 {
+	color: white;
+	/*font-size: 25px;*/
+	font-size: calc(15px + 0.83vw);
+	margin-top: 10px;
+}
+
+.project h5 {
+	color: var(--secondary);
+	/*font-size: 20px;*/
+	font-size: calc(12px + 0.66vw);
+	margin-top: 5px;
+}
+
+.project ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.project ul li {
+	margin: 5px;
+	padding: 5px;
+	background-color: #563be0;
+	border-radius: 4px;
+	color: white;
+	font-size: 14px;
 }
 
 @media screen and (max-width: 700px) {
@@ -473,7 +533,7 @@ section#projects {
 	section#about-me {
 		flex-direction: column;
 		align-items: start;
-		padding: 40px 20px;
+		padding: 20px 20px;
 	}
 
 	.about-me__img-con {
@@ -493,7 +553,7 @@ section#projects {
 	}
 
 	section#skills {
-		padding: 40px 20px;
+		padding: 20px 20px;
 	}
 
 	.skill-wrapper {
@@ -512,5 +572,9 @@ section#projects {
 
 	.skill:last-child {
 		margin-top: 20px !important;
+	}
+
+	section#projects {
+		padding: 20px 10px 10px;
 	}
 }
