@@ -203,7 +203,6 @@ section#about-me {
 }
 
 .about-me__img-con {
-	/*flex: 1 0 0;*/
 	min-width: 0;
 	display: flex;
 	margin-right: 70px;
@@ -226,7 +225,6 @@ section#about-me {
 }
 
 .about-me__text {
-	/*flex: 1 0 0;*/
 	min-width: 0;
 	display: flex;
 }
