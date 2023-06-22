@@ -154,17 +154,40 @@ section#home {
 }
 
 .home-about a {
-	padding: 18px 15px;
+	padding: 13px 25px;
 	display: inline-block;
 	margin-top: 20px;
-	border-radius: 8px;
+	border-radius: 4px;
 	background-color: var(--secondary);
 	color: var(--primary);
 	font-weight: 500;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	/*border: 1px solid var(--secondary);*/
 }
 
-.home-about a:hover {
-	background-color: #aed565;
+.home-about a::before,
+.about-me__text-wrapper a::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 0;
+	transform: translate(-50%, -50%) rotate(-45deg);
+	z-index: -1;
+	background-color: #06ffde;
+	transition: all 0.3s ease-in-out;
+}
+
+.about-me__text-wrapper a:hover {
+	color: var(--primary);
+}
+
+.home-about a:hover::before,
+.about-me__text-wrapper a:hover::before {
+	height: 400%;
 }
 
 .home-about a i {
@@ -239,13 +262,22 @@ section#about-me {
 }
 
 .about-me__text-wrapper a {
-	padding: 18px 15px;
+	padding: 14px 25px;
 	display: inline-block;
 	margin-top: 20px;
-	border-radius: 8px;
+	border-radius: 4px;
 	background-color: var(--primary);
 	color: var(--secondary);
 	font-weight: 500;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	font-size: 14px;
+	transition: all 0.3s ease-in-out;
+}
+
+.about-me__text-wrapper a::before {
+	transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .about-me__text-wrapper a i {
@@ -281,13 +313,34 @@ section#skills {
 	border-radius: 5px;
 	max-width: 400px;
 	transition: all 0.25s ease-in-out;
+	border: 2px solid var(--secondary);
+	border-top: none;
+	position: relative;
+	z-index: 1;
 }
 
-.skill:hover,
+.skill::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scaleX(0);
+	background-color: var(--primary);
+	z-index: -1;
+	transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover::before {
+	transform: scaleX(1);
+}
+
+/*.skill:hover,
 .project:hover {
 	transform: translateY(-10px);
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
+}*/
 
 .skill:first-child {
 	margin-right: 20px;
@@ -299,7 +352,6 @@ section#skills {
 
 .skill > span > i {
 	font-size: 40px;
-	color: var(--primary);
 	margin-bottom: 30px;
 }
 
@@ -307,7 +359,6 @@ section#skills {
 	/*font-size: 30px;*/
 	font-size: calc(20px + 0.83vw);
 	font-weight: 600;
-	color: var(--primary);
 	margin-bottom: 20px;
 }
 
@@ -318,6 +369,10 @@ section#skills {
 .skill ul li i {
 	margin-right: 25px;
 	margin-top: 10px;
+}
+
+.skill:hover {
+	color: white;
 }
 
 section#projects {
@@ -699,10 +754,10 @@ section#contact-me {
 		margin: 0 !important;
 	}
 
-	.skill:hover,
+	/*.skill:hover,
 	.project:hover {
 		transform: scale(1.03);
-	}
+	}*/
 
 	.skill:last-child {
 		margin-top: 20px !important;
