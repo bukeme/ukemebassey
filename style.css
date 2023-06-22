@@ -283,7 +283,8 @@ section#skills {
 	transition: all 0.25s ease-in-out;
 }
 
-.skill:hover {
+.skill:hover,
+.project:hover {
 	transform: translateY(-10px);
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -348,6 +349,9 @@ section#projects {
 	background-color: var(--primary);
 	width: 300px;
 	margin: 10px;
+	transition: all 0.25s ease-in-out;
+	display: flex;
+	flex-direction: column;
 }
 
 .project-img,
@@ -377,11 +381,140 @@ section#projects {
 
 .project ul li {
 	margin: 5px;
-	padding: 5px;
+	/*padding: 5px;*/
+	padding: calc(2.5px + 0.21vw);
 	background-color: #563be0;
 	border-radius: 4px;
 	color: white;
-	font-size: 14px;
+	/*font-size: 14px;*/
+	font-size: calc(10px + 0.33vw);
+}
+
+.project__btn-wrapper {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+	align-items: flex-end;
+}
+
+.project__btn-wrapper a {
+	padding: 8px 5px;
+	/*display: inline-block;*/
+	/*margin-top: 20px;*/
+	border-radius: 3px;
+	background-color: var(--secondary);
+	color: var(--primary);
+	font-weight: 500;
+	font-size: 12px;
+}
+
+.project__btn-wrapper a:hover {
+	background-color: #aed565;
+}
+
+.project__btn-wrapper a i {
+	margin-right: 4px;
+}
+
+section#contact-me {
+	min-height: 95vh;
+	background-color: var(--primary);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+}
+
+.contact-me-header {
+	font-size: 40px;
+	color: var(--secondary);
+}
+
+.contact-me__form {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 800px;
+	font-size: 20px;
+	max-width: 100%;
+}
+
+.contact-me__form input,
+.contact-me__form textarea,
+.contact-me__form button {
+	padding: 12px 10px;
+	border: none;
+	background: none;
+	outline: none;
+	border-bottom: 1px solid var(--secondary);
+	color: white;
+	margin-bottom: 10px;
+}
+
+*::placeholder {
+	color: white;
+}
+
+.contact-me__form > div {
+	display: flex;
+}
+
+.contact-me__form > div > input {
+	flex: 1 1 0;
+	min-width: 0;
+}
+
+.contact-me__form > div > input:first-child {
+	margin-right: 10px;
+}
+
+.contact-me__form > div > input:last-child {
+	margin-left: 10px;
+}
+
+.contact-me__form textarea {
+	height: 90px;
+}
+
+.contact-me__form button {
+	border: 1px solid var(--secondary);
+	margin-top: 20px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.25s ease-in-out;
+	position: relative;
+	z-index: 1;
+}
+
+.contact-me__form button::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--secondary);
+	z-index: -1;
+	transform: scaleY(0);
+	transform-origin: bottom;
+	transition: transform 0.25s ease-in-out;
+}
+
+.contact-me__form button:hover {
+	color: var(--primary);
+}
+
+.contact-me__form button:hover::after {
+	transform: scaleY(1);
+	transform-origin: top;
+}
+
+@media screen and (max-width: 830px) {
+	.projects-wrapper {
+		justify-content: center;
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -436,7 +569,7 @@ section#projects {
 	.hamburger-menu.active .hamburger::before {
 		top: 0;
 		left: 0;
-		transform: rotate(-405deg);
+		transform: rotate(405deg);
 		background-color: var(--primary);
 		visibility: visible;
 	}
@@ -444,7 +577,7 @@ section#projects {
 	.hamburger-menu.active .hamburger::after {
 		top: 0;
 		left: 0;
-		transform: rotate(405deg);
+		transform: rotate(315deg);
 		background-color: var(--primary);
 		visibility: visible;
 	}
@@ -566,7 +699,8 @@ section#projects {
 		margin: 0 !important;
 	}
 
-	.skill:hover {
+	.skill:hover,
+	.project:hover {
 		transform: scale(1.03);
 	}
 
@@ -576,5 +710,27 @@ section#projects {
 
 	section#projects {
 		padding: 20px 10px 10px;
+	}
+
+	section#contact-me {
+		padding: 20px;
+	}
+
+	.contact-me__form > div {
+		flex-direction: column;
+	}
+
+	.contact-me__form > div > input:first-child {
+		margin-right: 0;
+	}
+
+	.contact-me__form > div > input:last-child {
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.project__btn-wrapper a span {
+		display: none;
 	}
 }
