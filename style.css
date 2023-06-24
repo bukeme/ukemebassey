@@ -2,6 +2,7 @@
 	--primary: rgb(72, 49, 212);
 	--secondary: rgb(204, 243, 129);
 	--tertiary: #06ffde;
+	scroll-behavior: smooth;
 }
 
 * {
@@ -225,6 +226,14 @@ section#about-me {
 	min-width: 0;
 	display: flex;
 	margin-right: 100px;
+	transform: translateX(-50px);
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.about-me__img-con.animate {
+	transform: translateX(0);
+	opacity: 1;
 }
 
 .about-me__img-inner-con {
@@ -246,6 +255,14 @@ section#about-me {
 .about-me__text {
 	min-width: 0;
 	display: flex;
+	transform: translateX(50px);
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.about-me__text.animate {
+	transform: translateX(0);
+	opacity: 1;
 }
 
 .about-me__text-wrapper {
@@ -319,6 +336,22 @@ section#skills {
 	border-top: none;
 	position: relative;
 	z-index: 1;
+	transform: translateY(50px);
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+/*.skill:first-child {
+	transform: translateX(-50px);
+}
+
+.skill:last-child {
+	transform: translateX(50px);
+}*/
+
+.skill.animate {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .skill::before {
@@ -402,9 +435,17 @@ section#projects {
 
 .project-card {
 	width: 500px;
-	height: 250px;
+	height: 280px;
 	position: relative;
 	margin: 10px;
+	opacity: 0;
+	transform: scale(0.1);
+	transition: all 0.5s ease-in-out;
+}
+
+.project-card.animate {
+	opacity: 1;
+	transform: scale(1) rotate(-1080deg);
 }
 
 .project-card__front,
@@ -430,6 +471,10 @@ section#projects {
 	flex-direction: column;
 	justify-content: center;
 	transform: perspective(1000px) rotateY(-180deg);
+}
+
+.project-card__back > * {
+	min-height: 0;
 }
 
 .project-card:hover .project-card__front {
