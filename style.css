@@ -930,7 +930,7 @@ section#contact-me {
 	}
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 390px) {
 	.project-card__back > div a span {
 		display: none;
 	}
