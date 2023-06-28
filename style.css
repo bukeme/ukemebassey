@@ -226,7 +226,7 @@ section#about-me {
 	min-width: 0;
 	display: flex;
 	margin-right: 100px;
-	transform: translateX(-50px);
+	/*transform: translateX(-50px);*/
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
 }
@@ -255,7 +255,7 @@ section#about-me {
 .about-me__text {
 	min-width: 0;
 	display: flex;
-	transform: translateX(50px);
+	/*transform: translateX(50px);*/
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
 }
@@ -573,74 +573,6 @@ section#projects {
 .project-card__back > div a i {
 	margin-right: 4px;
 }
-
-/*.project {
-	padding: 20px;
-	border-radius: 5px;
-	background-color: var(--primary);
-	width: 300px;
-	margin: 10px;
-	transition: all 0.25s ease-in-out;
-	display: flex;
-	flex-direction: column;
-}
-
-.project-img,
-.project-img img {
-	border-radius: 5px;
-}
-
-.project h3 {
-	color: white;
-	font-size: calc(15px + 0.83vw);
-	margin-top: 10px;
-}
-
-.project h5 {
-	color: var(--secondary);
-	font-size: calc(12px + 0.66vw);
-	margin-top: 5px;
-}
-
-.project ul {
-	list-style: none;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.project ul li {
-	margin: 5px;
-	padding: calc(2.5px + 0.21vw);
-	background-color: #563be0;
-	border-radius: 4px;
-	color: white;
-	font-size: calc(10px + 0.33vw);
-}
-
-.project__btn-wrapper {
-	margin-top: 15px;
-	display: flex;
-	justify-content: space-between;
-	flex-grow: 1;
-	align-items: flex-end;
-}
-
-.project__btn-wrapper a {
-	padding: 8px 5px;
-	border-radius: 3px;
-	background-color: var(--secondary);
-	color: var(--primary);
-	font-weight: 500;
-	font-size: 12px;
-}
-
-.project__btn-wrapper a:hover {
-	background-color: #aed565;
-}
-
-.project__btn-wrapper a i {
-	margin-right: 4px;
-}*/
 
 section#contact-me {
 	min-height: 95vh;
