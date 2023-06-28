@@ -266,7 +266,7 @@ section#about-me {
 }
 
 .about-me__text-wrapper {
-	width: 400px;
+	width: 500px;
 	/*margin-left: 20px;*/
 }
 
@@ -301,6 +301,30 @@ section#about-me {
 
 .about-me__text-wrapper a i {
 	margin-right: 5px;
+}
+
+.about-me__email-whatsapp {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.about-me__email-whatsapp > div {
+	display: flex;
+	flex-direction: column;
+	/*align-items: center;*/
+	color: var(--primary);
+	margin: 10px 0;
+}
+
+.about-me__email-whatsapp > div:first-child {
+	margin-right: 10px;
+}
+
+.about-me__email--title,
+.about-me__whatsapp--title {
+	font-size: 20px;
+	font-weight: 700;
 }
 
 section#skills {
@@ -633,13 +657,53 @@ section#contact-me {
 	color: var(--secondary);
 }
 
-.contact-me__form {
-	margin-top: 20px;
+.contact-me-wrapper {
+	display: flex;
+	margin-top: 50px;
+	max-width: 100%;
+}
+
+.contact-me__info {
+	margin-right: 50px;
+}
+
+.contact-me__info > div {
+	display: flex;
+	align-items: center;
+	color: white;
+	margin-bottom: 20px;
+}
+
+.contact-me__info > div > i {
+	font-size: 30px;
+	font-weight: 700;
+	color: var(--secondary);
+	margin-right: 10px;
+}
+
+.contact-me__info > div > div {
 	display: flex;
 	flex-direction: column;
-	width: 800px;
+}
+
+.contact-me__info > div > div > span {
+	font-size: calc(12px + 0.33vw);
+}
+
+.contact-me__info > div > div > span:first-child {
+	font-weight: 600;
+	/*font-size: 20px;*/
+	font-size: calc(15px + 0.42vw);
+}
+
+.contact-me__form {
+	/*margin-top: 20px;*/
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	min-width: 0;
 	font-size: 20px;
-	max-width: 100%;
+	/*max-width: 100%;*/
 }
 
 .contact-me__form input,
@@ -718,7 +782,13 @@ section#contact-me {
 	}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
+	/*.about-me__email-whatsapp {
+		flex-direction: column;
+	}*/
+}
+
+@media screen and (max-width: 750px) {
 	.hamburger-menu {
 		display: flex;
 		justify-content: center;
@@ -927,6 +997,17 @@ section#contact-me {
 
 	.contact-me__form > div > input:last-child {
 		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.contact-me-wrapper {
+		flex-direction: column;
+	}
+
+	.contact-me__form {
+		margin-top: 40px;
+		max-width: 100%;
 	}
 }
 
