@@ -937,6 +937,10 @@ section#contact-me {
 		flex-direction: column;
 	}
 
+	.contact-me__info {
+		margin-right: 0;
+	}
+
 	.contact-me__form {
 		margin-top: 40px;
 		max-width: 100%;
