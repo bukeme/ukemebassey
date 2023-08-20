@@ -10,7 +10,6 @@ const navLinks = document.querySelectorAll('.nav-item a');
 
 let animationItemList = [aboutmeImg, aboutmeText];
 animationItemList = animationItemList.concat(Array.from(skills), Array.from(projectCards));
-console.log(animationItemList);
 
 
 
