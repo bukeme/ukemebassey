@@ -75,4 +75,31 @@ aside {
 	color: var(--secondary);
 	font-weight: 600;
 	font-size: 18px;
+	transition: color 0.25s ease-in-out;
+}
+
+.socials-container {
+	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.social-link {
+	color: var(--secondary-md);
+	font-size: 20px;
+	margin: 0px 10px;
+	transition: color 0.25s ease-in-out;
+}
+
+.social-link:hover,
+.social-link:active,
+.nav-item__text:hover,
+.nav-item__text:active {
+	color: var(--primary);
+}
+
+.socials-container__cont2 {
+	margin-top: 10px;
 }
